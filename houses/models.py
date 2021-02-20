@@ -10,6 +10,7 @@ class House(models.Model):
     num_bathrooms = models.IntegerField()
     num_bedrooms = models.IntegerField()
     garden = models.BooleanField(default=False, blank=False)
+    owner = models.ForeignKey('auth.User', null=True, on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['name']

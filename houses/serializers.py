@@ -29,5 +29,5 @@ class HouseSerializer(serializers.Serializer):
 class HouseSerializer(serializers.ModelSerializer):
     class Meta:
         model = House
-        fields = ['id', 'name', 'more_info', 'm2', 'num_bathrooms', 'num_bedrooms', 'garden']
+        fields = ['id', 'name', 'more_info', 'm2', 'num_bathrooms', 'num_bedrooms', 'garden', 'owner']
 
