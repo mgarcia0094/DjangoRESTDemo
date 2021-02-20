@@ -3,11 +3,11 @@ from rest_framework import viewsets, permissions
 from demoREST.serializers import UserSerializer, GroupSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
+    queryset = User.objects.all().order_by('id')
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
 
 class GroupViewSet(viewsets.ModelViewSet):
-    queryset = Group.objects.all()
+    queryset = Group.objects.all().order_by('id')
     serializer_class = GroupSerializer
     permission_classes = [permissions.IsAuthenticated]
